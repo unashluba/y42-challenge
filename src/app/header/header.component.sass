@@ -1,0 +1,83 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+
+.header
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 0
+  margin-bottom: 40px
+
+  @include devices
+    justify-content: center
+    padding: 25px 0
+    margin-bottom: 13px
+
+.header-navigation
+  display: flex
+  align-items: center
+
+.navigation-list
+  display: flex
+
+  @include devices
+    display: none
+
+.navigation-item
+  cursor: pointer
+
+  @include desktops
+    margin-left: 45px
+
+  @include devices
+    padding: 20px
+    border-bottom: solid 1px $gray
+
+.navigation-item-text
+  color: $white-opacity-70
+  @include default-transition(all)
+
+  @include devices
+    font-size: 20px
+    color: $blue-opacity-70
+
+  &:hover
+    @media (hover: hover)
+      color: $white
+
+.navigation-action-button
+  @include devices
+    display: none
+
+.item-expanded
+  &:hover
+    .navigation-item-chevron
+      transform: rotate(180deg)
+
+      path
+        fill-opacity: 1
+
+.navigation-item-chevron
+  display: inline-block
+  margin-left: 2px
+  @include default-transition(transform)
+
+  path
+    @include default-transition(fill-opacity)
+
+.header-logo
+  svg
+    @include devices
+      width: 84px
+      height: 26px
+
+.devices-navigation-opened
+  .devices-burger
+    transform: rotate(45deg)
+
+    &::before
+      transform: rotate(90deg) translateX(8px)
+
+    &::after
+      display: none

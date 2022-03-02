@@ -1,0 +1,36 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+
+.action-button
+  min-width: 200px
+  padding: 15px
+  border-radius: 5px
+  text-align: center
+  font-family: 'Montserrat', sans-serif
+  cursor: pointer
+  @include default-transition(all)
+
+  @include devices
+    min-width: 100%
+
+  &.default
+    background-color: $green
+    color: $blue
+
+    &:hover
+      @media (hover: hover)
+        background-color: $dark-green
+
+  &.outlined
+    border: 1px solid $white-opacity-30
+    color: $white-opacity-70
+    background: none
+
+    @include devices
+      color: $green
+      border: none
+
+    &:hover
+      @media (hover: hover)
+        border-color: $white
+        color: $white

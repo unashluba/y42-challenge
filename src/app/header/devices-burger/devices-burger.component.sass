@@ -1,0 +1,30 @@
+@import '../../../styles/mixins'
+@import '../../../styles/variables'
+
+$stripe-height: 3px
+$space-between-stripes: 5px
+
+@mixin burger-stripe
+  width: 23px
+  height: $stripe-height
+  background-color: $dark-gray
+
+.devices-burger
+  position: absolute
+  top: 35px
+  left: 0
+  z-index: 2
+  @include burger-stripe
+  @include default-transition(transform)
+
+  &::before
+    position: absolute
+    top: -($stripe-height + $space-between-stripes)
+    content: ''
+    @include burger-stripe
+
+  &::after
+    position: absolute
+    bottom: -($stripe-height + $space-between-stripes)
+    content: ''
+    @include burger-stripe

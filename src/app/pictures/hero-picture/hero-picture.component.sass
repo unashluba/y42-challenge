@@ -1,0 +1,15 @@
+@import '../../../styles/mixins'
+
+.hero-image
+  max-height: 670px
+  margin-top: -460px
+
+  @include tablets
+    margin-top: -220px
+
+  @include mobiles
+    margin-top: -137px
+
+  @include devices
+    margin-bottom: 30px
+    box-shadow: 0 41px 43px -22px rgba(36, 40, 75, 0.18)

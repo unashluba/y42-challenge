@@ -1,0 +1,27 @@
+<header class="header">
+  <nav class="header-navigation">
+    <a href="/">
+      <app-logo-svg class="header-logo"></app-logo-svg>
+    </a>
+
+    <app-devices-burger (click)="burgerClickEvent()" [class.devices-navigation-opened]="openedMenu"></app-devices-burger>
+
+    <ul class="navigation-list">
+      <li *ngFor="let item of navigationItems" class="navigation-item" [ngClass]="{ 'item-expanded' : item.expanded }">
+
+        <a *ngIf="item.link; else itemExpanded" class="navigation-item-text" href="{{ item.link }}">{{ item.name }}</a>
+
+        <ng-template #itemExpanded>
+          <span class="navigation-item-text">{{ item.name }}</span>
+          <app-chevron-svg class="navigation-item-chevron" *ngIf="item.expanded"></app-chevron-svg>
+        </ng-template>
+      </li>
+    </ul>
+  </nav>
+
+  <app-button
+    class="navigation-action-button"
+    [buttonText]="'Book a Demo'"
+  ></app-button>
+</header>
+

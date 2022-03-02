@@ -1,0 +1,35 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+
+.partners-section
+  position: relative
+  margin-top: 113px
+  margin-bottom: 95px
+
+  @include desktops
+    padding: 50px
+    border-top: 1px solid $gray
+    border-bottom: 1px solid $gray
+
+  @include devices
+    margin-top: 52px
+    margin-bottom: 70px
+
+.partners-section-title
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%, -50%)
+  padding: 0 30px
+  color: $blue-opacity-70
+  background-color: $white
+
+.partners-section-logos
+  max-width: 920px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.partner-logo + .partner-logo
+  margin-left: 30px

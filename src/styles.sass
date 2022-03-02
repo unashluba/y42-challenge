@@ -1,0 +1,75 @@
+@import './styles/variables'
+@import './styles/mixins'
+
+*
+  font-family: 'Nunito', sans-serif
+  box-sizing: border-box
+  line-height: 1.25
+  font-size: 16px
+
+body, ul, ol, p, h1
+  margin: 0
+
+ul, ol
+  list-style: none
+  padding: 0
+
+p
+  font-size: 20px
+  line-height: 1.45
+
+a
+  text-decoration: none
+
+svg
+  display: block
+  width: 100%
+
+img
+  display: block
+  object-fit: contain
+  max-width: 100%
+  image-rendering: -moz-crisp-edges
+  image-rendering: -o-crisp-edges
+  image-rendering: -webkit-optimize-contrast
+  image-rendering: crisp-edges
+
+h1
+  margin-bottom: 29px
+  font-weight: 700
+  font-size: 55px
+  font-family: 'Montserrat', sans-serif
+  line-height: 1.2
+
+  @include devices
+    margin-bottom: 19px
+    font-size: 24px
+
+button
+  outline: none
+  border: none
+
+.container
+  max-width: 2 * $side-padding + $max-content-width
+  margin: 0 auto
+  color: $white
+
+  @include desktops
+    padding-left: $side-padding
+    padding-right: $side-padding
+
+  @include devices
+    padding-left: 20px
+    padding-right: 20px
+
+.small-container
+  max-width: $max-small-content-width
+  margin: 0 auto
+
+.desktop-only
+  @include devices
+    display: none
+
+.device-only
+  @include desktops
+    display: none

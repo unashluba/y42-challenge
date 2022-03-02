@@ -1,0 +1,26 @@
+@import '../../styles/mixins'
+@import '../../styles/variables'
+
+.hero-section
+  min-height: 914px
+  background: radial-gradient(47.07% 86.04% at 47.77% 79.58%, $light-blue 0%, $dark-blue 100%)
+  color: $white
+
+  @include devices
+    min-height: 449px
+
+.hero-section-intro
+  text-align: center
+
+  @include desktops
+    margin-bottom: 70px
+
+.hero-section-intro-copy
+  margin: 0 30px 30px
+  color: $white-opacity-70
+
+  @include mobiles
+    margin: 0 0 30px
+
+.action-button + .action-button
+  margin-left: 14px
