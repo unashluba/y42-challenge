@@ -4,7 +4,7 @@
       <app-logo-svg class="header-logo"></app-logo-svg>
     </a>
 
-    <app-devices-burger (click)="burgerClickEvent()" [class.devices-navigation-opened]="openedMenu"></app-devices-burger>
+    <app-devices-burger (click)="burgerClickEvent()" [class.devices-navigation-opened]="openedDeviceMenu"></app-devices-burger>
 
     <ul class="navigation-list">
       <li *ngFor="let item of navigationItems" class="navigation-item" [ngClass]="{ 'item-expanded' : item.expanded }">

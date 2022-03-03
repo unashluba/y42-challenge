@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
-  openedMenu = false;
+  openedDeviceMenu = false;
 
   navigationItems = [
     {
@@ -28,7 +28,7 @@ export class HeaderComponent {
     },
   ];
 
-  burgerClickEvent(){
-    this.openedMenu = !this.openedMenu;
+  burgerClickEvent(): void {
+    this.openedDeviceMenu = !this.openedDeviceMenu;
   }
 }

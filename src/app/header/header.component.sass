@@ -30,17 +30,9 @@
   @include desktops
     margin-left: 45px
 
-  @include devices
-    padding: 20px
-    border-bottom: solid 1px $gray
-
 .navigation-item-text
   color: $white-opacity-70
   @include default-transition(all)
-
-  @include devices
-    font-size: 20px
-    color: $blue-opacity-70
 
   &:hover
     @media (hover: hover)
@@ -73,9 +65,9 @@
       height: 26px
 
 .devices-navigation-opened
-  .devices-burger
-    transform: rotate(45deg)
+  transform: rotate(45deg)
 
+  .devices-burger
     &::before
       transform: rotate(90deg) translateX(8px)
 

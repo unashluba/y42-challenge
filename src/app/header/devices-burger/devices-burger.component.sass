@@ -9,13 +9,21 @@ $space-between-stripes: 5px
   height: $stripe-height
   background-color: $dark-gray
 
+\:host
+  position: absolute
+  top: 27px
+  left: 0
+  width: 23px
+  height: 3 * $stripe-height + 2 * $space-between-stripes
+  z-index: 2
+  @include default-transition(transform)
+
 .devices-burger
   position: absolute
-  top: 35px
+  top: 50%
   left: 0
-  z-index: 2
+  transform: translateY(-50%)
   @include burger-stripe
-  @include default-transition(transform)
 
   &::before
     position: absolute
